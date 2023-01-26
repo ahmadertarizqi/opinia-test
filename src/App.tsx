@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+import { Header } from "~/components/layouts/header";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -7,6 +8,7 @@ function App() {
   return (
     <div className="min-h-screen w-100 flex flex-col">
       <main className="flex-1 flex items-center justify-center">
+        <Header />
         <div>
           <div className="flex">
             <a href="https://vitejs.dev" target="_blank">
