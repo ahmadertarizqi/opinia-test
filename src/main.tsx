@@ -5,6 +5,7 @@ import './index.css'
 
 import BaseLayout from "./components/base-layout"
 import ChatPage from "./pages/chat"
+import ChatDetailPage from "./pages/chat-detail"
 
 const router = createBrowserRouter([
   {
@@ -12,7 +13,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <ChatPage />
+        element: <ChatPage />,
+        children: [
+          {
+            path: "chat/:userId",
+            element: <ChatDetailPage />
+          }
+        ]
       },
     ]
   }

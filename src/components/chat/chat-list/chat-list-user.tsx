@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Avatar } from "~/components/common/avatar";
 
 type ChatItemUser = {
@@ -31,19 +32,23 @@ function ChatItemUser(props: ChatItemUser) {
 export function ChatListUser() {
   return (
     <div className="flex-1 overflow-y-auto">
-      <ChatItemUser 
-        photo="/img/users/user1.png"
-        name="Oktada" 
-        message="Selamat siang Adam" 
-        date="28 Sep 22" 
-      />
-      <ChatItemUser 
-        photo="/img/users/user2.png"
-        name="Resti Ananda" 
-        message="Sama sama" 
-        date="26 Sep 22" 
-        isRead 
-      />
+      <Link to={"/chat/1"} className="d-block">
+        <ChatItemUser 
+          photo="/img/users/user1.png"
+          name="Oktada" 
+          message="Selamat siang Adam" 
+          date="28 Sep 22" 
+        />
+      </Link>
+      <Link to={"/chat/2"} className="d-block">
+        <ChatItemUser 
+          photo="/img/users/user2.png"
+          name="Resti Ananda" 
+          message="Sama sama" 
+          date="26 Sep 22" 
+          isRead 
+        />
+      </Link>
     </div>
   )
 }
