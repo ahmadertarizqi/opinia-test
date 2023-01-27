@@ -10,7 +10,8 @@ module.exports = {
         sans: ["Inter var, sans-serif"]
       },
       colors: {
-        primary: "#05B1A1"
+        "primary": "#05B1A1",
+        "primary-light": "#ACE5E0"
       },
       maxWidth: {
         "8xl": "90rem"
