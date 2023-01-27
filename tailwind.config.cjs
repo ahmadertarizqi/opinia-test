@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#05B1A1"
+      },
       maxWidth: {
         "8xl": "90rem"
       }

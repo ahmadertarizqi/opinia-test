@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import './index.css'
 
 import BaseLayout from "./components/base-layout"
-import ChatPage from "./pages/login"
+import ChatPage from "./pages/chat"
 
 const router = createBrowserRouter([
   {
