@@ -6,13 +6,14 @@ interface FormGroupProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const FormGroup = forwardRef<HTMLDivElement, FormGroupProps>(
-  ({ className, children, isRelative }) => {
+  ({ className, children, isRelative }, ref) => {
     return (
       <div className={clsx(
           "rounded-full",
           isRelative && "relative",
           className
         )}
+        ref={ref}
       >
         {children}
       </div>
