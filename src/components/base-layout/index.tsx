@@ -7,8 +7,8 @@ function BaseLayout() {
   const breakpoints = useBreakpoints();
   return (
     <div className="min-h-screen w-100 flex flex-col">
-      <Header />
-      <main className="flex-1 pt-20 flex flex-col">
+      {breakpoints.isDesktop ? <Header /> : null} 
+      <main className="flex-1 pb-12 lg:pb-0 lg:pt-20 flex flex-col">
         <Outlet />
       </main>
       {breakpoints.isTabletOrMobile ? <NavigationMobile /> : null}

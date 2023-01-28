@@ -7,7 +7,7 @@ function ChatPage() {
     <ChatContainer>
       <div className="w-full h-full shadow-sm border rounded-lg flex">
         <ChatList />
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 hidden lg:flex flex-col">
           <Outlet />
         </div>
       </div>
