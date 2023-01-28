@@ -12,7 +12,7 @@ export function ChatDetailHead() {
         <div className="flex-none block w-8 h-full">
           <span 
             className="w-full h-full cursor-pointer flex items-center justify-start"
-            onClick={() => navigate(-1)}
+            onClick={() => navigate("/chat")}
           >
             <img src="/icons/back.svg" alt="icon-action" />
           </span>  

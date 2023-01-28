@@ -6,8 +6,8 @@ import useBreakpoints from "~/hooks/use-breakpoints";
 
 function ChatDetailMobileWrapper({ children }: { children?: React.ReactNode }) {
   return (
-    <div className="fixed top-0 left-0 w-full h-screen">
-      <div className="bg-white w-full h-full">
+    <div className="fixed top-0 left-0 w-full h-screen z-20">
+      <div className="bg-white w-full h-full flex flex-col">
         {children}
       </div>
     </div>
