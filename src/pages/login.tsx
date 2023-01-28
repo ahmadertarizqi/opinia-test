@@ -7,7 +7,7 @@ import { LoginForm } from "~/components/login/login-form";
 export default function LoginPage() {
   return (
     <div className="min-h-screen w-100 flex flex-col">
-      <main className="flex-1 flex">
+      <main className="flex-1 flex overflow-hidden">
         <div className="absolute top-0 left-0 right-0 bottom-0">
           <img src="/img/chat-background.png" className="w-full h-full object-cover" alt="chat-background" />
         </div>
