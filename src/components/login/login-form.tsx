@@ -16,12 +16,15 @@ function FormInput({ type = "text", placeholder, ...rest }: FormInputProps) {
 
 export function LoginForm() {
   return (
-    <div className="w-full max-w-6xl mx-auto flex items-center">
-      <div className="flex-none d-block w-[512px]">
+    <div className="w-full max-w-6xl mx-auto lg:flex items-center py-5">
+      <div className="hidden lg:block flex-none w-[512px]">
         <img src="/img/opinia-typography.png" alt="opinia-typography-background" />
       </div>
-      <div className="flex-none d-block w-full max-w-md mx-auto">
-        <div className="shadow-app-auth bg-white rounded-lg p-5 mb-5">
+      <div className="block lg:hidden flex-none px-4 mb-4">
+        <img src="/assets/opinia-icon-logo.png" className="block mx-auto" alt="opinia-icon-logo" />
+      </div>
+      <div className="flex-none d-block w-full max-w-md mx-auto px-4">
+        <div className="shadow-app-auth bg-white rounded-lg px-4 p-5 mb-5">
           <form action="#">
             <FormGroup className="mb-3">
               <FormInput placeholder="Email atau Nomor Telepon" />
