@@ -9,9 +9,17 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSizes;
 }
 
-export function Button({ type = "button", variant, size, className, ...rest }: ButtonProps) {
-  const baseStyles = "focus:outline-none focus:ring leading-normal rounded-md";
-  
+export function Button({ 
+  type = "button", 
+  variant, 
+  size, 
+  className, 
+  children, 
+  ...rest 
+}: ButtonProps) {
+  const baseStyles = "inline-block focus:outline-none focus:ring leading-normal rounded-md";
+  const disabledStyles = "disabled:cursor-not-allowed disabled:opacity-50";
+
   const variantStyles = (variantItem?: ButtonVariants) => {
     switch(variantItem) {
       case "primary": {
@@ -48,11 +56,17 @@ export function Button({ type = "button", variant, size, className, ...rest }: B
 
   return (
     <button 
-      className={clsx(baseStyles, variantStyles(variant), sizeStyles(size), className)}
+      className={clsx(
+        baseStyles, 
+        disabledStyles,
+        variantStyles(variant), 
+        sizeStyles(size), 
+        className
+      )}
       type={type} 
       {...rest}
     >
-      Save Changes
+      {children}
     </button>
   )
 }
