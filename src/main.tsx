@@ -7,6 +7,7 @@ import BaseLayout from "./components/base-layout"
 import LoginPage from "./pages/login"
 import ChatPage from "./pages/chat"
 import ChatDetailPage from "./pages/chat-detail"
+import ChatStartPage from "./pages/chat-start"
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
         path: "/chat",
         element: <ChatPage />,
         children: [
+          {
+            index: true,
+            element: <ChatStartPage />
+          },
           {
             path: "/chat/:userId",
             element: <ChatDetailPage />
