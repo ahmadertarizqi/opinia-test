@@ -8,7 +8,7 @@ export const InputText = forwardRef<HTMLInputElement, InputTextProps>(
     return (
       <input 
         className={clsx(
-          "placeholder:text-slate-400 block w-full bg-neutral-100 py-2 px-3 rounded-full focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-2",
+          "placeholder:text-slate-400 block w-full bg-neutral-100 py-2 px-3 rounded-full focus:outline-none focus:border-primary focus:ring-primary focus:ring-2",
           className
         )}
         ref={ref}

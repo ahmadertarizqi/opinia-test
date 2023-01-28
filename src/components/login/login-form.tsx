@@ -43,7 +43,7 @@ export function LoginForm() {
             </div>
             <div className="mb-2">
               <Link to={`/chat`} className="block">
-                <Button variant="primary" className="w-full">Save Changes</Button>
+                <Button variant="primary" className="w-full">Masuk</Button>
               </Link>
             </div>
             <div className="mb-4">
