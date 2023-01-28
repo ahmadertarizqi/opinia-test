@@ -21,7 +21,7 @@ function ChatDetailPage() {
   if (breakpoints.isDesktop) {
     return (
       <>
-        <ChatDetailHead />
+        <ChatDetailHead userId={userId} />
         <ChatDetailBody userId={userId} />
         <ChatDetailBottomBar />
       </>
@@ -30,7 +30,7 @@ function ChatDetailPage() {
 
   return (
     <ChatDetailMobileWrapper>
-      <ChatDetailHead />
+      <ChatDetailHead userId={userId} />
       <ChatDetailBody userId={userId} />
       <ChatDetailBottomBar />
     </ChatDetailMobileWrapper>
