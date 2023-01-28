@@ -1,8 +1,23 @@
+import { useNavigate } from "react-router-dom";
 import { Avatar } from "~/components/common/avatar";
+import useBreakpoints from "~/hooks/use-breakpoints";
 
 export function ChatDetailHead() {
+  const navigate = useNavigate();
+  const breakpoints = useBreakpoints();
+
   return (
-    <div className="flex-none h-12 flex items-center justify-between border-b px-3">
+    <div className="flex-none h-12 flex items-center justify-between border-b px-3 bg-white">
+      {breakpoints.isTabletOrMobile ? (
+        <div className="flex-none block w-8 h-full">
+          <span 
+            className="w-full h-full cursor-pointer flex items-center justify-start"
+            onClick={() => navigate(-1)}
+          >
+            <img src="/icons/back.svg" alt="icon-action" />
+          </span>  
+        </div>
+      ) : null}
       <div className="flex-1 flex items-center">
         <Avatar src="/img/users/user1.png" size="sm" className="flex-none d-block" />
         <div className="flex-1 px-3 overflow-hidden">

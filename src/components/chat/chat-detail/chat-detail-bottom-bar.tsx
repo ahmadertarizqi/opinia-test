@@ -4,7 +4,7 @@ import { InputText } from "~/components/forms/input-text";
 export function ChatDetailBottomBar() {
   return (
     <div className="flex-none block h-[60px]">
-      <div className="px-3 h-full flex gap-1 items-stretch border-t">
+      <div className="px-3 h-full flex gap-1 items-stretch border-t bg-white">
         <div className="flex-none block w-8">
           <span className="w-full h-full flex items-center justify-center cursor-pointer">
             <img src="/icons/camera-outlined.svg" className="w-6 h-6" alt="icon-camera-action" />
